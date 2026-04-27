@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kadhiravan Nagarajan — Tech x Finance</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:#f8f7ff;color:#1e1b4b;}
+
+h1{font-family:'Sora';font-size:3rem;}
+section{padding:80px 20px;}
+.container{max-width:1100px;margin:auto;}
+
+.hero{display:flex;align-items:center;justify-content:center;height:100vh;text-align:center;flex-direction:column;}
+
+.hero-title{color:#6d28d9;font-weight:600;margin-top:10px;}
+.hero-desc{max-width:650px;margin-top:15px;color:#555;line-height:1.7;}
+
+.logo-strip{display:flex;gap:30px;margin-top:30px;flex-wrap:wrap;justify-content:center;}
+.logo-strip img{height:28px;opacity:0.7;}
+
+.skills{margin-top:25px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+.skill{padding:6px 14px;background:#eee;border-radius:20px;font-size:12px;}
+
+.card{background:#fff;padding:25px;border-radius:16px;margin-bottom:20px;box-shadow:0 10px 30px rgba(0,0,0,0.05);}
+
+.fade{opacity:0;transform:translateY(40px);transition:all 0.8s ease;}
+.fade.show{opacity:1;transform:translateY(0);}
+
+.exp-title{font-weight:700;}
+.exp-company{color:#6d28d9;font-size:14px;margin-bottom:10px;}
+
+ul{padding-left:18px;}
+li{margin-bottom:8px;}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Kadhiravan Nagarajan</h1>
+
+  <div class="hero-title">
+    MSc International Business | AWS Certified Solutions Architect | Ex-Capgemini | Agile
+  </div>
+
+  <p class="hero-desc">
+    Tech + Finance hybrid specializing in AWS, automation, and data engineering — delivering scalable analytics systems, investor reporting platforms, and cloud-native solutions for global infrastructure funds.
+  </p>
+
+  <!-- LOGO STRIP -->
+  <div class="logo-strip">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Capgemini_201x_logo.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney_wordmark.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/General_Electric_logo.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Meridiam_logo.png">
+  </div>
+
+  <div class="skills">
+    <span class="skill">AWS</span>
+    <span class="skill">Java</span>
+    <span class="skill">Python</span>
+    <span class="skill">Automation</span>
+    <span class="skill">Power BI</span>
+    <span class="skill">Excel VBA</span>
+    <span class="skill">ESG Reporting</span>
+    <span class="skill">Sustainability</span>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+<div class="container">
+
+  <h2>Professional Experience</h2>
+
+  <!-- MERIDIAM -->
+  <div class="card fade">
+    <div class="exp-title">Infrastructure & Data Analyst (Intern)</div>
+    <div class="exp-company">Meridiam — Paris</div>
+
+    <ul>
+      <li>Designed and automated Python data pipelines processing €5B+ infrastructure fund data, reducing manual reporting effort by 70%</li>
+      <li>Built multi-layer Power BI dashboards tracking IRR, NAV, and portfolio KPIs used by internal leadership and external investors</li>
+      <li>Automated ESG & SFDR reporting workflows, cutting report generation time from days to hours</li>
+      <li>Delivered co-investor reporting systems supporting institutions like EBRD, PGGM, and John Hancock</li>
+    </ul>
+  </div>
+
+  <!-- CAPGEMINI -->
+  <div class="card fade">
+    <div class="exp-title">Senior Analyst / Software Engineer</div>
+    <div class="exp-company">Capgemini — GE Aerospace</div>
+
+    <ul>
+      <li>Developed Java-based automation tools reducing manual XML reporting workload by 60%</li>
+      <li>Managed production-grade Linux systems ensuring SLA compliance for global B2B platforms</li>
+      <li>Optimized data processing workflows improving system efficiency and reliability</li>
+    </ul>
+  </div>
+
+  <div class="card fade">
+    <div class="exp-title">Software Engineer</div>
+    <div class="exp-company">Capgemini — Walt Disney</div>
+
+    <ul>
+      <li>Built scalable Spring Boot microservices integrated with AWS (EC2, DynamoDB, ECS)</li>
+      <li>Supported systems serving millions of users across Disney hospitality platforms</li>
+      <li>Led migration from Java 8 to Java 11 improving performance and maintainability</li>
+      <li>Worked in Agile environments using Jira, delivering features in sprint cycles</li>
+    </ul>
+  </div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section style="background:#fff;">
+<div class="container fade">
+
+  <h2>About</h2>
+
+  <p>
+    I bring around 3 years of experience across software engineering, cloud infrastructure, and data analytics — now applied in the infrastructure investment space.
+  </p>
+
+  <p>
+    My edge is simple: I don’t just build systems — I build systems that reduce cost, automate workflows, and scale decision-making.
+  </p>
+
+</div>
+</section>
+
+<script>
+const elements = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
